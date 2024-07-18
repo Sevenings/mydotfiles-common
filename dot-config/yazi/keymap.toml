@@ -151,15 +151,21 @@ keymap = [
 	{ on = [ "g", "." ],       run = "cd ~/.dotfiles",   desc = "Go to .dotfiles" },
 	{ on = [ "g", "a" ],       run = "cd ~/Documentos/atividades",   desc = "Go to atividades" },
 	{ on = [ "g", "b" ],       run = "cd ~/Documentos/'biblioteca de babel'",   desc = "Go to babel" },
-   #{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go to downloads " },
 	{ on = [ "g", "t" ],       run = "cd ~/'Estagio TCE'",          desc = "Go to Estagio" },
 	{ on = [ "g", "T" ],       run = "cd ~/.local/share/Trash",    desc = "Go to Trash Can" },
 	{ on = [ "g", "p" ],       run = "cd ~/Projetos",    desc = "Go to Projetos" },
-	{ on = [ "g", "s" ],       run = "cd ~/.config/myScripts",    desc = "Go to Projetos" },
-	{ on = [ "g", "d" ],       run = "cd ~/Downloads",    desc = "Go to Projetos" },
+	{ on = [ "g", "s" ],       run = "cd ~/.myScripts",    desc = "Go to myScripts" },
+	{ on = [ "g", "d" ],       run = "cd ~/Downloads",    desc = "Go to Downloads" },
 
     # Drag and Drop
 	{ on = [ "d", "p" ],       run = """ shell --confirm 'dragon-drop -x -a "$@"' """,    desc = "Drag n Drop" },
+
+    # New Project
+	{ on = [ "e", "e" ],       run = "plugin new-project",    desc = "New Project" },
+
+    # Zip and Unzip
+	{ on = [ "z", "z" ],       run = """ shell --confirm 'zip -r "$1".zip "$1"' """,    desc = "Zip folder" },
+	{ on = [ "z", "u" ],       run = """ shell --confirm 'unzip "$1"' """,    desc = "Unzip file" },
 
     # Mkdir
     # Fazer plugin
