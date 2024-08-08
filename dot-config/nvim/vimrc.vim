@@ -25,6 +25,7 @@ set scrolloff=8
 set sidescrolloff=8
 
 
+
 " =========
 " FUNCTIONS
 " =========
@@ -76,7 +77,8 @@ map <leader><F5>p :!rifle -w python %<CR>
 
 
 " Abrir Terminal ah lá VSCode
-map <Leader>tt :sp<CR><c-w>w:term<CR>:resize 14<CR>
+map <Leader>tt :sp<CR><c-w>w:term<CR>:resize 8<CR>
+map <Leader>T :tabnew<CR>:term<CR>
 
 " Terminal ESC goes to normal mode
 tnoremap <Esc> <C-\><C-n>
@@ -110,6 +112,12 @@ map <Leader>gy :Yazi<CR>
 map <Leader>c gcc
 vmap <Leader>c gc
 
+" End comma
+imap ;; <ESC>A;<ESC>
+
+" Normal mode on jj
+imap jj <ESC>
+
 
 " =======================================================
 "               Plugins with VimPlug
@@ -135,7 +143,9 @@ source ~/.config/nvim/plugins/kotlin-vim.vim
 
 " APPEARENCE
 "source ~/.config/nvim/plugins/gruvbox.vim
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+"Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'folke/tokyonight.nvim'
+"Plug 'yonlu/omni.vim'
 "source ~/.config/nvim/plugins/vim-transparent.vim
 source ~/.config/nvim/plugins/yazi-nvim.vim
 
@@ -143,6 +153,18 @@ source ~/.config/nvim/plugins/yazi-nvim.vim
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'ryanoasis/vim-devicons'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'barrett-ruth/live-server.nvim', 
+
+Plug 'rafamadriz/friendly-snippets'
+
+Plug 'hrsh7th/cmp-path'
+
+Plug 'nvim-treesitter/nvim-treesitter'
+
+"Plug 'garymjr/nvim-snippets'
 
 
 "source ~/.config/nvim/plugins/jupyter-vim.vim
@@ -153,7 +175,12 @@ call plug#end()
 " ===========================
 
 
-colorscheme catppuccin-mocha
-let g:airline_theme='violet'
+colorscheme tokyonight-night
+let g:airline_theme='spaceduck'
+
+lua vim.keymap.set('v', '<Leader>s',  ":SSSelected" )
+
+"Live server for web development
+lua require('live-server').setup()
 
 

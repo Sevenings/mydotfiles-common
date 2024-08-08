@@ -61,13 +61,11 @@ keymap = [
 	{ on = [ "o" ],         run = "open",                       desc = "Open the selected files" },
 	{ on = [ "O" ],         run = "open --interactive",         desc = "Open the selected files interactively" },
 	{ on = [ "<Enter>" ],   run = "enter",                       desc = "Open the selected files" },
-	#{ on = [ "<Enter>" ],   run = "open",                       desc = "Open the selected files" },
 	{ on = [ "<C-Enter>" ], run = "open --interactive",         desc = "Open the selected files interactively" },
 	{ on = [ "l" ],         run = "open",                       desc = "Open the selected files" },
-	{ on = [ "y", "y" ],         run = "yank",                       desc = "Copy the selected files" },
+	{ on = [ "y", "y" ],    run = "yank",                       desc = "Copy the selected files" },
 	{ on = [ "Y" ],         run = "unyank",                     desc = "Cancel the yank status of files" },
 	{ on = [ "d", "d" ],    run = "yank --cut",                 desc = "Cut the selected files" },
-	#{ on = [ "X" ],         run = "unyank",                     desc = "Cancel the yank status of files" },
 	{ on = [ "p" ],         run = "paste",                      desc = "Paste the files" },
 	{ on = [ "P" ],         run = "paste --force",              desc = "Paste the files (overwrite if the destination exists)" },
 	{ on = [ "-" ],         run = "link",                       desc = "Symlink the absolute path of files" },
@@ -77,13 +75,8 @@ keymap = [
 	{ on = [ "a" ],         run = "create",                     desc = "Create a file or directory (ends with / for directories)" },
 	{ on = [ "r" ],         run = "rename --cursor=before_ext", desc = "Rename a file or directory" },
 	{ on = [ "s" ],         run = "shell --interactive",        desc = "Run a shell command" },
-	#{ on = [ ":" ],         run = "shell --block",              desc = "Run a shell command (block the UI until the command finishes)" },
 	{ on = ["<Backspace>"], run = "hidden toggle",              desc = "Toggle the visibility of hidden files" },
-    #{ on = [ "f" ],         run = "search fd",                  desc = "Search files by name using fd" },
-	#{ on = [ "f" ],         run = "search rg",                  desc = "Search files by content using ripgrep" },
 	{ on = [ "<C-s>" ],     run = "search none",                desc = "Cancel the ongoing search" },
-	#{ on = [ "z" ],         run = "plugin zoxide",              desc = "Jump to a directory using zoxide" },
-	#{ on = [ "f" ],         run = "plugin fzf",                 desc = "Jump to a directory, or reveal a file using fzf" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Set linemode to size" },
@@ -92,14 +85,12 @@ keymap = [
 	{ on = [ "m", "n" ], run = "linemode none",        desc = "Set linemode to none" },
 
 	# Copy
-	{ on = [ "c", "c" ], run = "copy path",             desc = "Copy the absolute path" },
-	{ on = [ "c", "d" ], run = "copy dirname",          desc = "Copy the path of the parent directory" },
-	{ on = [ "c", "f" ], run = "copy filename",         desc = "Copy the name of the file" },
-	{ on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy the name of the file without the extension" },
+	{ on = [ "y", "p" ], run = "copy path",             desc = "Copy the absolute path" },
+	{ on = [ "y", "d" ], run = "copy dirname",          desc = "Copy the path of the parent directory" },
+	{ on = [ "y", "n" ], run = "copy filename",         desc = "Copy the name of the file" },
+	{ on = [ "y", "N" ], run = "copy name_without_ext", desc = "Copy the name of the file without the extension" },
 
 	# Filter
-    #{ on = [ "f" ], run = "find --smart", desc = "Find next file" },
-    #{ on = [ "f" ], run = "filter --smart", desc = "Filter the files" },
     { on = [ "f" ], run = "plugin smart-filter", desc = "Smart Filter" },
 
 	# Find
