@@ -78,6 +78,14 @@ keymap = [
 	{ on = ["<Backspace>"], run = "hidden toggle",              desc = "Toggle the visibility of hidden files" },
 	{ on = [ "<C-s>" ],     run = "search none",                desc = "Cancel the ongoing search" },
 
+    # Sudo Operations
+    { on = ["S", "p"],      run = "plugin sudo --args='paste'",      desc = "sudo Paste" },
+    { on = ["S", "r"],      run = "plugin sudo --args='rename'",     desc = "sudo Rename" },
+    { on = ["S", "_"],      run = "plugin sudo --args='link'",       desc = "sudo Link" },
+    { on = ["S", "a"],      run = "plugin sudo --args='create'",     desc = "sudo Create" },
+    { on = ["S", "d", "D"], run = "plugin sudo --args='remove'",     desc = "sudo Trash" },
+    { on = ["S", "D", "D"], run = "plugin sudo --args='remove -P'",  desc = "sudo Delete" },
+
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Set linemode to size" },
 	{ on = [ "m", "p" ], run = "linemode permissions", desc = "Set linemode to permissions" },
@@ -263,14 +271,14 @@ keymap = [
 	{ on = [ "<A-d>" ], run = "kill forward",  desc = "Kill forwards to the end of the current word" },
 
 	# Cut/Yank/Paste
-	{ on = [ "d" ], run = "delete --cut",                              desc = "Cut the selected characters" },
-	{ on = [ "D" ], run = [ "delete --cut", "move 999" ],              desc = "Cut until the EOL" },
-	{ on = [ "c" ], run = "delete --cut --insert",                     desc = "Cut the selected characters, and enter insert mode" },
-	{ on = [ "C" ], run = [ "delete --cut --insert", "move 999" ],     desc = "Cut until the EOL, and enter insert mode" },
-	{ on = [ "x" ], run = [ "delete --cut", "move 1 --in-operating" ], desc = "Cut the current character" },
-	{ on = [ "y" ], run = "yank",           desc = "Copy the selected characters" },
-	{ on = [ "p" ], run = "paste",          desc = "Paste the copied characters after the cursor" },
-	{ on = [ "P" ], run = "paste --before", desc = "Paste the copied characters before the cursor" },
+	{ on = [ "d" ], run = "delete --cut",                               desc = "Cut the selected characters" },
+	{ on = [ "D" ], run = [ "delete --cut", "move 999" ],               desc = "Cut until the EOL" },
+	{ on = [ "c" ], run = "delete --cut --insert",                      desc = "Cut the selected characters, and enter insert mode" },
+	{ on = [ "C" ], run = [ "delete --cut --insert", "move 999" ],      desc = "Cut until the EOL, and enter insert mode" },
+	{ on = [ "x" ], run = [ "delete --cut", "move 1 --in-operating" ],  desc = "Cut the current character" },
+	{ on = [ "y" ], run = "yank",                                       desc = "Copy the selected characters" },
+	{ on = [ "p" ], run = "paste",                                      desc = "Paste the copied characters after the cursor" },
+	{ on = [ "P" ], run = "paste --before",                             desc = "Paste the copied characters before the cursor" },
 
 	# Undo/Redo
 	{ on = [ "u" ],     run = "undo", desc = "Undo the last operation" },
