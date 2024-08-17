@@ -53,6 +53,8 @@ endfunction
 command Texton call TextModeOn()
 command Textoff call TextModeOff()
 
+command GenCMakeCompileCommands !cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1<CR>
+
 
 
 " ========

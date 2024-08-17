@@ -32,7 +32,7 @@ keymap = [
 	{ on = [ "<PageDown>" ],   run = "arrow 100%",  desc = "Move cursor down one page" },
 
 	{ on = [ "h" ], run = "leave", desc = "Go back to the parent directory" },
-	{ on = [ "l" ], run = "enter", desc = "Enter the child directory" },
+	{ on = [ "l" ], run = "plugin --sync smart-enter", desc = "Enter the child directory" },
 
 	{ on = [ "H" ], run = "back",    desc = "Go back to the previous directory" },
 	{ on = [ "L" ], run = "forward", desc = "Go forward to the next directory" },
@@ -58,9 +58,9 @@ keymap = [
 	{ on = [ "<C-r>" ],   run = "select_all --state=none",            desc = "Inverse selection of all files" },
 
 	# Operation
-	{ on = [ "o" ],         run = "open",                       desc = "Open the selected files" },
+	{ on = [ "o" ],         run = "plugin --sync smart-enter",  desc = "Open the selected files" },
 	{ on = [ "O" ],         run = "open --interactive",         desc = "Open the selected files interactively" },
-	{ on = [ "<Enter>" ],   run = "enter",                       desc = "Open the selected files" },
+	{ on = [ "<Enter>" ],   run = "enter",                      desc = "Open the selected files" },
 	{ on = [ "<C-Enter>" ], run = "open --interactive",         desc = "Open the selected files interactively" },
 	{ on = [ "l" ],         run = "open",                       desc = "Open the selected files" },
 	{ on = [ "y", "y" ],    run = "yank",                       desc = "Copy the selected files" },
@@ -155,6 +155,7 @@ keymap = [
 	{ on = [ "g", "p" ],       run = "cd ~/Projetos",    desc = "Go to Projetos" },
 	{ on = [ "g", "s" ],       run = "cd ~/.myScripts",    desc = "Go to myScripts" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",    desc = "Go to Downloads" },
+	{ on = [ "g", "/" ],       run = "cd /",    desc = "Go to Root" },
 
     # Drag and Drop
 	{ on = [ "d", "p" ],       run = """ shell --confirm 'dragon-drop -x -a "$@"' """,    desc = "Drag n Drop" },
