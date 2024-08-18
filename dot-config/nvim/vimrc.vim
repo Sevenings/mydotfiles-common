@@ -1,6 +1,5 @@
 " ====================
-" Configurações Gerais
-" ====================
+" Configurações Gerais ====================
 set expandtab
 set tabstop=4
 set softtabstop=4 
@@ -185,4 +184,4 @@ lua vim.keymap.set('v', '<Leader>s',  ":SSSelected" )
 "Live server for web development
 lua require('live-server').setup()
 
-
+set nosplitright

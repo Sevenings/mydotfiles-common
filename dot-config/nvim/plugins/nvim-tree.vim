@@ -6,4 +6,5 @@ Plug 'nvim-tree/nvim-tree.lua'
 " ======================
 
 " Keybindings
-nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <leader>w :NvimTreeToggle<CR>
+
