@@ -151,6 +151,7 @@ local plugins_path = vim.fn.stdpath("config") .. "/plugins/"
 
 vim.cmd.source(plugins_path .. "luasnip-snippets.lua")
 vim.cmd.source(plugins_path .. "lua-mappings.lua")
+vim.cmd.source(plugins_path .. "gitsigns.lua")
 
 require("luasnip.loaders.from_vscode").lazy_load()
 

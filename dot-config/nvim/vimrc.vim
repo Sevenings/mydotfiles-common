@@ -1,5 +1,6 @@
 " ====================
-" Configurações Gerais ====================
+" Configurações Gerais 
+" ====================
 set expandtab
 set tabstop=4
 set softtabstop=4 
@@ -22,6 +23,9 @@ set hlsearch
 set nowrap
 set scrolloff=8
 set sidescrolloff=8
+
+set foldmethod=indent
+set foldlevel=99
 
 
 
@@ -165,6 +169,7 @@ Plug 'hrsh7th/cmp-path'
 
 Plug 'nvim-treesitter/nvim-treesitter'
 
+Plug 'lewis6991/gitsigns.nvim'
 "Plug 'garymjr/nvim-snippets'
 
 
