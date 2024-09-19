@@ -147,12 +147,16 @@ source ~/.config/nvim/plugins/vim-lsp.vim
 source ~/.config/nvim/plugins/kotlin-vim.vim
 
 " APPEARENCE
-"source ~/.config/nvim/plugins/gruvbox.vim
+
+" GENERAL
+"source ~/.config/nvim/plugins/vim-transparent.vim
+source ~/.config/nvim/plugins/yazi-nvim.vim
+
+" COLORSCHEMES
+""source ~/.config/nvim/plugins/gruvbox.vim
 "Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'folke/tokyonight.nvim'
 "Plug 'yonlu/omni.vim'
-"source ~/.config/nvim/plugins/vim-transparent.vim
-source ~/.config/nvim/plugins/yazi-nvim.vim
 
 
 Plug 'tpope/vim-surround'
