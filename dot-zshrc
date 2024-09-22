@@ -53,8 +53,10 @@ alias get_idf='. $HOME/esp/esp-idf/export.sh'
 alias allow_acm='sudo chmod a+rw /dev/ttyACM0'
 alias allow_usb='sudo chmod a+rw /dev/ttyUSB0'
 alias clip='wl-copy'
-alias activate_venv_python='source .venv/bin/activate; alias pip=./.venv/bin/pip; alias python=./.venv/bin/python'
 alias atividades='cd ~/Documentos/atividades'
+alias activate_venv_python='source .venv/bin/activate; alias pip="$(pwd)"/.venv/bin/pip; alias python="$(pwd)"/.venv/bin/python'
+alias ssh="kitten ssh"
+alias sudo="sudo -E -s"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
