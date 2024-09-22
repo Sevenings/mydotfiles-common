@@ -44,8 +44,6 @@ source $HOME/.config/zsh/yazi.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias :q="exit"
 alias quit="exit"
 alias vim="nvim"
@@ -56,6 +54,7 @@ alias allow_acm='sudo chmod a+rw /dev/ttyACM0'
 alias allow_usb='sudo chmod a+rw /dev/ttyUSB0'
 alias clip='wl-copy'
 alias activate_venv_python='source .venv/bin/activate; alias pip=./.venv/bin/pip; alias python=./.venv/bin/python'
+alias atividades='cd ~/Documentos/atividades'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -70,12 +69,12 @@ neofetch
 calcurse -d 7
 
 # Created by `pipx` on 2024-06-20 19:25:07
-export PATH="$PATH:/home/zenitsu/.local/bin"
+# export PATH="$PATH:/home/zenitsu/.local/bin"
 
 # pnpm
-export PNPM_HOME="/home/zenitsu/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# export PNPM_HOME="/home/zenitsu/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # pnpm end

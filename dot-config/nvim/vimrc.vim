@@ -123,6 +123,10 @@ imap ;; <ESC>A;<ESC>
 " Normal mode on jj
 imap jj <ESC>
 
+map <c-a> GVgg_
+map <c-c> "+y
+map <c-v> "+p
+
 
 " =======================================================
 "               Plugins with VimPlug
@@ -147,13 +151,20 @@ source ~/.config/nvim/plugins/vim-lsp.vim
 source ~/.config/nvim/plugins/kotlin-vim.vim
 
 " APPEARENCE
+" ---------------------
+"
+" COLORSCHEMES
 "source ~/.config/nvim/plugins/gruvbox.vim
 "Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-Plug 'folke/tokyonight.nvim'
-"Plug 'yonlu/omni.vim'
+"Plug 'folke/tokyonight.nvim'
+Plug 'yonlu/omni.vim'
+Plug 'rebelot/kanagawa.nvim'
+"
+" MISCELANEOUS
 "source ~/.config/nvim/plugins/vim-transparent.vim
-source ~/.config/nvim/plugins/yazi-nvim.vim
 
+
+source ~/.config/nvim/plugins/yazi-nvim.vim
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -181,8 +192,8 @@ call plug#end()
 " ===========================
 
 
-colorscheme tokyonight-night
-let g:airline_theme='spaceduck'
+colorscheme kanagawa
+let g:airline_theme='transparent'
 
 lua vim.keymap.set('v', '<Leader>s',  ":SSSelected" )
 
