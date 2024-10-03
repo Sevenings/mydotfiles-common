@@ -123,7 +123,7 @@ imap ;; <ESC>A;<ESC>
 " Normal mode on jj
 imap jj <ESC>
 
-map <c-a> GVgg_
+"map <c-a> GVgg_
 map <c-c> "+y
 map <c-v> "+p
 
