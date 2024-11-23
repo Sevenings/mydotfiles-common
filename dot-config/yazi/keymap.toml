@@ -161,6 +161,7 @@ keymap = [
 	{ on = [ "g", "v" ],        run = "cd ~/Videos",                            desc = "Go to Videos" },
 	{ on = [ "g", "d", "c" ],   run = "cd ~/Documentos",                        desc = "Go to Documentos" },
 	{ on = [ "g", "d", "w" ],   run = "cd ~/Downloads",                         desc = "Go to Downloads" },
+	{ on = [ "g", "e" ],        run = "cd ~/Documentos/'Estudos Espiritismo'",    desc = "Go to Estudos Espiritismo" },
 
     # Drag and Drop
 	{ on = [ "d", "p" ],       run = """ shell --confirm 'dragon-drop -x -a "$@"' """,    desc = "Drag n Drop" },

@@ -10,7 +10,6 @@ local hovered = ya.sync(function()
 		unique = #cx.active.current.files == 1,
 	}
 end)
-
 local function prompt()
 	return ya.input {
 		title = "Smart filter:",
@@ -37,7 +36,6 @@ local function entry()
 			ya.manager_emit("escape", { filter = true })
 			ya.manager_emit("enter", { h.url })
             ya.input_emit("close", {})  -- Added 
-            --input = prompt()          -- Commented
 		elseif event == 1 then
 			ya.manager_emit("escape", { filter = true })
 			ya.manager_emit(h.is_dir and "enter" or "open", { h.url })

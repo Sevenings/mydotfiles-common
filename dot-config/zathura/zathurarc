@@ -64,4 +64,4 @@ set recolor true
 
 
 include catppuccin-mocha
-#include transparency
+include transparency

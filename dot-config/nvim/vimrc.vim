@@ -34,7 +34,7 @@ set foldlevel=99
 " =========
 
 function TextModeOn()
-    setlocal spell spelllang=pt_BR
+    setlocal spell spelllang=pt_br
     set textwidth=67
 endfunction
 
