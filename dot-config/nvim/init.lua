@@ -11,9 +11,8 @@ require('config.lazy')
 --- Plugins Config Import
 ---------------------
 
-local plugins_path = vim.fn.stdpath("config") .. "/plugins/"
-
-vim.cmd.source(plugins_path .. "lua-mappings.lua")
+-- local plugins_path = vim.fn.stdpath("config") .. "/plugins/"
+-- vim.cmd.source(plugins_path .. "lua-mappings.lua")
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
