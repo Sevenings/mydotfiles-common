@@ -39,7 +39,7 @@ return {
             })
 
             -- Load snippets from ~/.config/nvim/Snippets/
-            require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/Snippets/"})
+            require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/snippets/"})
 
         end
     },
