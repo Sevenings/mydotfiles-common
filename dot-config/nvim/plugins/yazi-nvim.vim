@@ -1,1 +1,0 @@
-Plug 'DreamMaoMao/yazi.nvim'

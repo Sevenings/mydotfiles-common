@@ -3,5 +3,6 @@ return {
     {'tpope/vim-fugitive'},
     {'tikhomirov/vim-glsl'},
     {'ryanoasis/vim-devicons'},
-    {'DreamMaoMao/yazi.nvim'}
+    {'DreamMaoMao/yazi.nvim'},
+    {'karb94/neoscroll.nvim'}
 }

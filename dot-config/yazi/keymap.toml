@@ -164,8 +164,8 @@ keymap = [
 	{ on = [ "g", "d", "w" ],   run = "cd ~/Downloads",                         desc = "Go to Downloads" },
 	{ on = [ "g", "e" ],        run = "cd ~/Documentos/'Estudos Espiritismo'",    desc = "Go to Estudos Espiritismo" },
 
-    # Drag and Drop
-	{ on = [ "d", "p" ],       run = """ shell --confirm 'dragon-drop -x -a "$@"' """,    desc = "Drag n Drop" },
+    # Drag and Drop # [D]rop [F]ile
+	{ on = [ "d", "f" ],       run = """ shell --confirm 'dragon-drop -x -a "$@"' """,    desc = "Drag n Drop" },
 
     # New Project
 	{ on = [ "e", "e" ],       run = "plugin new-project",    desc = "New Project" },
