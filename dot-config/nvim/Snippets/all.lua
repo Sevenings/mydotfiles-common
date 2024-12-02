@@ -29,57 +29,57 @@ end
 
 return {
     -- Example: how to set snippet parameters
-    s(
-        { -- Table 1: snippet parameters
-            trig="hi",
-            dscr="An autotriggering snippet that expands 'hi' into 'Hello, world!'",
-            regTrig=false,
-            priority=100,
-            snippetType="autosnippet"
-        },
-        { -- Table 2: snippet nodes (don't worry about this for now---we'll cover nodes shortly)
-            t("Hello, world!"), -- A single text node
-        }
-        -- Table 3, the advanced snippet options, is left blank.
-    ),
+    -- s(
+    --     { -- Table 1: snippet parameters
+    --         trig="hi",
+    --         dscr="An autotriggering snippet that expands 'hi' into 'Hello, world!'",
+    --         regTrig=false,
+    --         priority=100,
+    --         snippetType="autosnippet"
+    --     },
+    --     { -- Table 2: snippet nodes (don't worry about this for now---we'll cover nodes shortly)
+    --         t("Hello, world!"), -- A single text node
+    --     }
+    --     -- Table 3, the advanced snippet options, is left blank.
+    -- ),
 
-    -- Example: how to set snippet parameters
-    -- Equation
-    s({trig="eq", dscr="Expands 'eq' into an equation environment"},
-      fmta(
-            [[
-                \begin{equation*}
-                    <>
-                \end{equation*}
-                <>
-            ]],
-            { i(1), i(0) }
-        )
-    ),
+    -- -- Example: how to set snippet parameters
+    -- -- Equation
+    -- s({trig="eq", dscr="Expands 'eq' into an equation environment"},
+    --   fmta(
+    --         [[
+    --             \begin{equation*}
+    --                 <>
+    --             \end{equation*}
+    --             <>
+    --         ]],
+    --         { i(1), i(0) }
+    --     )
+    -- ),
 
-    -- Expande no ambiente Begin
-    s({trig="beg", dscr="Expande no ambiente Begin genérico"},
-        fmta(
-            [[
-                \begin{<>}
-                    <>
-                \end{<>}
-                <>
-            ]],
-            { i(1), i(2), rep(1), i(0) }
-        )
-    ),
+    -- -- Expande no ambiente Begin
+    -- s({trig="beg", dscr="Expande no ambiente Begin genérico"},
+    --     fmta(
+    --         [[
+    --             \begin{<>}
+    --                 <>
+    --             \end{<>}
+    --             <>
+    --         ]],
+    --         { i(1), i(2), rep(1), i(0) }
+    --     )
+    -- ),
 
-    s({trig="for", dscr="For loop Lua"},
-        fmta(
-            [[
-                for <>=<>, <> do
-                    <>
-                end
-                <>
-            ]],
-            { i(1, "i"), i(2, "0"), i(3, "n"), d(4, get_visual), i(0) }
-        )
-    )
+    -- s({trig="for", dscr="For loop Lua"},
+    --     fmta(
+    --         [[
+    --             for <>=<>, <> do
+    --                 <>
+    --             end
+    --             <>
+    --         ]],
+    --         { i(1, "i"), i(2, "0"), i(3, "n"), d(4, get_visual), i(0) }
+    --     )
+    -- )
 }
 
