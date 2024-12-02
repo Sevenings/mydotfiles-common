@@ -1,4 +1,6 @@
 return {
+
+    -- Mason, LSP Manager
     {
         'williamboman/mason.nvim',
         init = function()
@@ -28,13 +30,11 @@ return {
         end,
     },
 
+
+    -- Lsp do Neovim
     {'neovim/nvim-lspconfig'},
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/cmp-path'},
-    {'saadparwaiz1/cmp_luasnip'},
 
-
+    -- Lsp-zero, LSP pré-configurado
     {
         'VonHeikemen/lsp-zero.nvim',
         init = function()
@@ -91,5 +91,12 @@ return {
 
             lsp_zero.setup()
         end
-    }
+    },
+
+
+    -- Nvim-cmp. Autosugestion e completion
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-path'},
+    {'saadparwaiz1/cmp_luasnip'},
 }
