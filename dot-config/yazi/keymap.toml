@@ -151,7 +151,7 @@ keymap = [
 	{ on = [ "g", "." ],        run = "cd ~/.dotfiles",                         desc = "Go to .dotfiles" },
 	{ on = [ "g", "a" ],        run = "cd ~/Documentos/atividades",             desc = "Go to atividades" },
 	{ on = [ "g", "b" ],        run = "cd ~/Documentos/'biblioteca de babel'",  desc = "Go to babel" },
-	{ on = [ "g", "t" ],        run = "cd '~/Projetos/Projetos-TCE/'",          desc = "Go to Projetos Estagio" },
+	{ on = [ "g", "t" ],        run = "cd '~/Estagio TCE/atividades/15 Apresentação Machine Learning/'",          desc = "Go to Projetos Estagio" },
 	{ on = [ "g", "T" ],        run = "cd ~/.local/share/Trash",                desc = "Go to Trash Can" },
 	{ on = [ "g", "p" ],        run = "cd ~/Projetos",                          desc = "Go to Projetos" },
 	{ on = [ "g", "P" ],        run = "cd ~/Playground",                        desc = "Go to Playground" },
