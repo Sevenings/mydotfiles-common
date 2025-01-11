@@ -66,8 +66,6 @@ command GenCMakeCompileCommands !cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1<CR>
 " MAPPINGS
 " ========
 
-let mapleader = "\<space>"
-
 " Melhor CTRL+C e CTRL+V para fora do vim
 noremap <leader>y "+y
 noremap <leader>p "+p

@@ -86,6 +86,7 @@ keymap = [
     { on = ["S", "a"],      run = "plugin sudo --args='create'",     desc = "sudo Create" },
     { on = ["S", "d", "D"], run = "plugin sudo --args='remove'",     desc = "sudo Trash" },
     { on = ["S", "D", "D"], run = "plugin sudo --args='remove -P'",  desc = "sudo Delete" },
+    { on = ["S", "e"],      run = "plugin sudo --args='edit'",       desc = "sudo Edit" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Set linemode to size" },
@@ -168,8 +169,9 @@ keymap = [
     # Drag and Drop # [D]rop [F]ile
 	{ on = [ "d", "f" ],       run = """ shell --confirm 'dragon-drop -x -a "$@"' """,    desc = "Drag n Drop" },
 
-    # New Project
-	{ on = [ "e", "e" ],       run = "plugin new-project",    desc = "New Project" },
+    # Create Template File
+	{ on = [ "c", "e" ],       run = "plugin new-project",    desc = "New Project" },
+	{ on = [ "c", "t" ],       run = "plugin load-template",  desc = "Load Template" },
 
     # Zip and Unzip
 	{ on = [ "z", "z" ],       run = """ shell --confirm 'zip -r "$1".zip "$1"' """,    desc = "Zip folder" },

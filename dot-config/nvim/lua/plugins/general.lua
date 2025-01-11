@@ -11,4 +11,5 @@ return {
       end
     },
     -- {'kevinhwang91/nvim-ufo'},
+    { 'airblade/vim-rooter' },
 }

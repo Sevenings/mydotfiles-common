@@ -64,13 +64,30 @@ local get_state = ya.sync(function(_, cmd)
                 hovered = tostring(cx.active.current.hovered.url),
             },
         }
+    elseif cmd == "edit" then
+        local selected = {}
+
+        if #cx.active.selected ~= 0 then
+            for _, url in pairs(cx.active.selected) do
+                table.insert(selected, tostring(url))
+            end
+        else
+            table.insert(selected, tostring(cx.active.current.hovered.url))
+        end
+
+        return {
+            kind = cmd,
+            value = {
+                selected = selected,
+            },
+        }
     else
         return {}
     end
 end)
 
 local function sudo_cmd()
-    return { "sudo", "-k", "--" }
+    return { "sudo", "-E", "-s", "-k", "--" }
 end
 
 local function extend_list(self, list)
@@ -160,6 +177,13 @@ local function sudo_remove(value)
     execute(args)
 end
 
+local function sudo_edit(value)
+    local args = sudo_cmd()
+    table.insert(args, "nvim")
+    extend_iter(args, list_map(value.selected, ya.quote))
+    execute(args)
+end
+
 return {
     entry = function(_, args)
         local state = get_state(args[1])
@@ -175,6 +199,8 @@ return {
             sudo_remove(state.value)
         elseif state.kind == "rename" then
             sudo_rename(state.value)
+        elseif state.kind == "edit" then
+            sudo_edit(state.value)
         end
     end,
 }
