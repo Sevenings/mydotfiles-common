@@ -174,7 +174,7 @@ keymap = [
 	{ on = [ "c", "t" ],       run = "plugin load-template",  desc = "Load Template" },
 
     # Zip and Unzip
-	{ on = [ "z", "z" ],       run = """ shell --confirm 'zip -r "$1".zip "$1"' """,    desc = "Zip folder" },
+	{ on = [ "z", "z" ],       run  = "plugin compress",                      desc = "Zip files" },
 	{ on = [ "z", "u" ],       run = """ shell --confirm 'unzip "$1"' """,    desc = "Unzip file" },
 
     # Mkdir
@@ -188,6 +188,7 @@ keymap = [
 
     # Expand and colapse preview
 	{ on = [ "i" ], run = "plugin max-preview", desc = "Maximize preview" },
+
 ]
 
 [tasks]
