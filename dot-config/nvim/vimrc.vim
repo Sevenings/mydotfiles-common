@@ -24,11 +24,14 @@ set nowrap
 set scrolloff=8
 set sidescrolloff=8
 
-set foldmethod=indent
 set foldlevel=99
+set foldmethod=expr
+set foldexpr=getline(v:lnum-1)=~'^\\s*$'&&getline(v:lnum)=~'\\S'?'>1':1
 
 " Para algum plugin aí, acho que o vimtex
 set nosplitright
+
+set noshowmode
 
 
 " =========
@@ -132,6 +135,16 @@ map <Leader>/ :noh<CR>
 
 noremap n nzz
 noremap N Nzz
+
+
+
+" =======================
+"    Auto commands
+" =======================
+
+" Define o shiftwidth = 2 em arquivos markdown
+autocmd FileType markdown setlocal shiftwidth=2
+
 
 
 

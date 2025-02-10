@@ -18,5 +18,7 @@ use = "yazi-rs/plugins:max-preview"
 rev = "8ed2537"
 hash = "9bc26d10d2f6e2aa93b10905b1b76979"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "marcosvnmelo/kanagawa-dragon"
+rev = "2ddff30"
+hash = "c9e9fcf6b11c9fe63d4ac7c9408f628c"
